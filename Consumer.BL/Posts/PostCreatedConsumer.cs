@@ -10,7 +10,6 @@ internal class PostCreatedConsumer(IConnectionMultiplexer multiplexer, ILogger<P
     await multiplexer.GetSubscriber().SubscribeAsync(RedisChannel.Literal("PostCreated"), (channel, value) =>
     {
       logger.LogInformation($"Msg from {channel} and value is {value}");
-      throw new Exception();
     });
   }
 }
