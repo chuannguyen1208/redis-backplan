@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  web_api:
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+    ports:
+      - "5000:5000"
+  
+  worker_instance1:
+    build:
+      context: .
+      dockerfile: ConsumerWebApi/Dockerfile
+    ports:
+      - "5001:5000"
+  
+  worker_instance2:
+    build:
+      context: .
+      dockerfile: ConsumerWebApi/Dockerfile
+    ports:
+      - "5002:5000"
