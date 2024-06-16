@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ConsumerWebApi": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_HTTP_PORTS": "5001"
+      }
+    }
+  }
+}
